@@ -8,6 +8,6 @@ echo "options are:"
 ls install/ | grep 'Dockerfile'
 echo "building docker image for $1"
 
-sudo docker build -t myproject install/ -f install/$1
+sudo docker build -t image-1 install/ -f install/$1
 
 echo "Done!"
