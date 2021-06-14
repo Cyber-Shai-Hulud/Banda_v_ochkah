@@ -1,8 +1,7 @@
 numpy 
 pandas
-os
 pathlib
-PIL
+Pillow
 ast
 matplotlib
 shutil
