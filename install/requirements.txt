@@ -1,7 +1,4 @@
 numpy 
 pandas
-pathlib
 Pillow
-AST
 matplotlib
-shutil
