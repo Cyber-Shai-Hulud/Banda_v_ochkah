@@ -2,6 +2,6 @@ numpy
 pandas
 pathlib
 Pillow
-ast
+AST
 matplotlib
 shutil
