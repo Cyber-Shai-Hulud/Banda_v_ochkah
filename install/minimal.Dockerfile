@@ -3,7 +3,7 @@
 
 FROM tensorflow/tensorflow:2.5.0-gpu-jupyter
 
-RUN apt-get update && apt-get install -y git wget
+RUN apt-get update && apt-get install -y git wget protobuf-compiler
 RUN /usr/bin/python3 -m pip install --upgrade pip
 
 RUN mkdir -p /tf
