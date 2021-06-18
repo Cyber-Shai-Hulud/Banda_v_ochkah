@@ -3,3 +3,4 @@ pandas
 Pillow
 matplotlib
 tf_slim
+opencv-python-headless
