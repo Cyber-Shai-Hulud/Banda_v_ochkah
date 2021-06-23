@@ -1,3 +1,10 @@
 pandas
 Pillow
 matplotlib
+bokeh
+tqdm
+pydicom
+seaborn
+scikit-image
+opencv-python
+sklearn
