@@ -7,5 +7,5 @@ pydicom
 seaborn
 scikit-image
 opencv-python
-sklearn
+scikit-learn
 pylibjpeg-libjpeg
