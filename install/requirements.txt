@@ -8,4 +8,5 @@ seaborn
 scikit-image
 opencv-python
 sklearn
+pylibjpeg-libjpeg
 python-gdcm
