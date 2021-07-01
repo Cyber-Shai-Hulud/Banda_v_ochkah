@@ -11,3 +11,5 @@ scikit-learn
 pylibjpeg-libjpeg
 python-gdcm
 tensorflow-io
+psutil
+albumentations
