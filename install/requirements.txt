@@ -9,3 +9,4 @@ scikit-image
 opencv-python
 scikit-learn
 pylibjpeg-libjpeg
+python-gdcm
