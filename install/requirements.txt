@@ -13,3 +13,4 @@ python-gdcm
 tensorflow-io
 psutil
 albumentations
+pydicom
