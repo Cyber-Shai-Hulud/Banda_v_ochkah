@@ -11,3 +11,6 @@ scikit-learn
 pylibjpeg-libjpeg
 python-gdcm
 tensorflow-io==0.17.1
+psutil
+albumentations
+pydicom
