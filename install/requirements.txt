@@ -10,4 +10,4 @@ opencv-python
 scikit-learn
 pylibjpeg-libjpeg
 python-gdcm
-tensorflow-io
+tensorflow-io==0.17.1
