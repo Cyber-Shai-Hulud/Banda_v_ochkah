@@ -8,11 +8,6 @@ from flask import request
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
-def hello_world():
-    return render_template('index.html')
-
-
 @app.route('/', methods=['POST'])
 def predict():
     imagefile = request.files['imagefile']
@@ -20,13 +15,12 @@ def predict():
         "images", imagefile.filename)
     imagefile.save(imagepath)
 
-    model = tf.keras.models.load_model(
-        '7_layer_CNN.h5')
+    model = tf.keras.models.load_model('VGG19')
     lb = pickle.loads(open(
         'lb_7_layer_CNN.pickle', "rb").read())
 
     image = tf.keras.preprocessing.image.load_img(
-        imagepath, target_size=(224, 224))
+        imagepath, target_size=(256, 256))
 
     image = tf.keras.preprocessing.image.img_to_array(image)
 
