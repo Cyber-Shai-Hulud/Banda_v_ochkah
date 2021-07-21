@@ -8,6 +8,8 @@
     h1 {
         color: maroon;
     }
+
+
 </style>
 
 <head>
@@ -15,25 +17,26 @@
 </head>
 
 <body>
-    <h1>
-        <center>Diagnosis from X-ray scan</center>
-    </h1>
-    <center>
-        <form class="p-3 text-center" action="/" , method="post" enctype="multipart/form-data">
-            <input class="form-control" type="file" name="imagefile">
-            <input class="btn btn-primary mt-3" type="submit" value="Diagnose uploaded X-ray">
-    </center>
-    </form>
+<h1>
+    <center>Diagnosis from X-ray scan</center>
+</h1>
+<center>
+    <form class="p-3 text-center" action="/main/" method="post" enctype="multipart/form-data">
+        <input class="form-control" type="file" name="imagefile">
+        <input class="btn btn-primary mt-3" type="submit" value="Diagnose uploaded X-ray">
+</center>
+</form>
 
-    {% if prediction_1%}
-    <p>
-        <center>X-ray for {{filename}} is <b>{{pred_1_prob}}% {{prediction_1}}</b> and {{pred_2_prob}}% {{prediction_2}}
-        </center>
-    </p>
-    {% endif %}
-    <center>
-        <img src="{{url_for('static', filename='x_ray.jpg')}}">
-    </center>
+{% if prediction_1%}
+<p>
+<center>X-ray for {{filename}} is <b>{{pred_1_prob}}% {{prediction_1}}</b> and {{pred_2_prob}}% {{prediction_2}}
+</center>
+</p>
+{% endif %}
+<center>
+    <img src="{{url_for('static', filename='x_ray.jpg')}}">
+</center>
+<!-- CSS only -->
 </body>
 
 </html>

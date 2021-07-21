@@ -5,10 +5,17 @@ import tensorflow as tf
 import pickle
 from flask import Flask, render_template, request
 from flask import request
+
 app = Flask(__name__)
 
+a = "привет"
+n = 12
+@app.route('/', methods=['GET', ])
+def hello():
+    return render_template("index.html")
 
-@app.route('/', methods=['POST'])
+
+@app.route('/main/', methods=['POST', ])
 def predict():
     imagefile = request.files['imagefile']
     imagepath = os.path.join(
@@ -39,7 +46,6 @@ def predict():
 
     # To show two classes with probabilities
     labelsprob_list = label_preds[0].tolist()
-
     label_1_prob = sorted(labelsprob_list)[-1]
     label_2_prob = sorted(labelsprob_list)[-2]
 
@@ -68,7 +74,8 @@ def predict():
         "static", "x_ray.jpg")
     cv2.imwrite(plot_path, image_scaled)
 
-    return render_template('index.html', prediction_1=label_1, pred_1_prob=f'{label_1_prob:.3}', prediction_2=label_2, pred_2_prob=f'{label_2_prob:.3}', filename=imagefile.filename)
+    return render_template('index.html', prediction_1=label_1, pred_1_prob=f'{label_1_prob:.3}', prediction_2=label_2,
+                           pred_2_prob=f'{label_2_prob:.3}', filename=imagefile.filename)
 
 
 if __name__ == '__main__':
