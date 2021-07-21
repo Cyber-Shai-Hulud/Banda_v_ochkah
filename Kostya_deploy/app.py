@@ -8,8 +8,7 @@ from flask import request
 
 app = Flask(__name__)
 
-a = "привет"
-n = 12
+
 @app.route('/', methods=['GET', ])
 def hello():
     return render_template("index.html")
